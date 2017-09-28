@@ -1,10 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nc-pod 
+  name: nc-server-b1-od 
   labels:
-    name: nc-pod
-    app: nc-pod
+    name: nc-server-b1-od
+    app: nc-server-b1-od
     version: 0.1.0
 spec:
   replicas: 1
