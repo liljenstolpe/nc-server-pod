@@ -20,8 +20,10 @@ spec:
         - name: nc-pod
           image: quay.io/samsung_cnct/nc-pod:latest 
           env:
+          env:
             - name: NC_CMD_ARGS
               value: "-l 9999"
+            - name: STACK_CLUSTER
+              value: "Pub A"
           ports:
-          - containerPort: 9999 
-
+          - containerPort: 9999

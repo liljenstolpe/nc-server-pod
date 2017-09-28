@@ -22,6 +22,7 @@ spec:
           env:
             - name: NC_CMD_ARGS
               value: "-l 9999"
+            - name: STACK_CLUSTER
+              value: "Priv B"
           ports:
-          - containerPort: 9999 
-
+          - containerPort: 9999
