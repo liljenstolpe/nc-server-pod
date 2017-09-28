@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: policy
+metadata:
+  name: allow-all-b
+spec:
+  selector: stack == 'b'
+  order: 400
+  ingress:
+  - action: allow
+    protocol: tcp
+    source:
+      selector: stack == 'b'
+      ports: [9999]

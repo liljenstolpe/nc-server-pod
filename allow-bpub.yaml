@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: policy
+metadata:
+  name: allow-bpub
+spec:
+  selector: stack == 'b' && cluster == 'public'
+  order: 400
+  ingress:
+  - action: allow
+    protocol: tcp
+    source:
+      selector: stack == 'b' && cluster == 'public'
+      ports: [9999]

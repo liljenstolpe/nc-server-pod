@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: policy
+metadata:
+  name: allow-apriv
+spec:
+  selector: stack == 'a' && cluster == 'private'
+  order: 400
+  ingress:
+  - action: allow
+    protocol: tcp
+    source:
+      selector: stack == 'a' && cluster == 'private'
+      ports: [9999]
